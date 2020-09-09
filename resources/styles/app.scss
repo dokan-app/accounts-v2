@@ -1,0 +1,11 @@
+$primary: #004c3f;
+@import "~bulma-scss/bulma";
+body {
+    @apply bg-gray-200;
+    min-height: 100vh;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
