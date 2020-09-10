@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class AuthController extends Controller
 {
@@ -42,6 +43,42 @@ class AuthController extends Controller
         session()->flash('successMsg', __('Successfully registered. Now login to your account'));
 
         return redirect()->route('auth.login');
+    }
+
+
+    public function updateProfile(Request $request)
+    {
+        $payload = $request->validate([
+            'name' => ['required', 'min:3'],
+            'email' => ['required', 'email', Rule::unique('users')->ignore(auth()->user())],
+        ]);
+
+        auth()->user()->update($payload);
+        session()->flash('successMsg', 'Successfully updated your profile');
+
+        return redirect()->back();
+    }
+
+
+    public function updatePassword(Request $request)
+    {
+
+        $request->validate([
+            'oldPassword' => ['required'],
+            'newPassword' => ['required', 'confirmed']
+        ]);
+
+        if (!auth()->validate([
+            'email' => auth()->user()->email,
+            'password' => $request->oldPassword
+        ])) {
+            session()->flash('errorMsg', 'Invalid old password');
+        }
+
+        auth()->user()->update(['password' => bcrypt($request->newPassword)]);
+        session()->flash('successMsg', 'Password updated successfully');
+
+        return redirect()->back();
     }
 
 

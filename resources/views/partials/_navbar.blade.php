@@ -42,11 +42,11 @@
             @endguest
 
             @auth
-                <a href="{{route('oauth')}}" class="navbar-item">Developer</a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <div class="navbar-link">{{ auth()->user()->name  }}</div>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="#">{{__('Settings')}}</a>
+                        <a class="navbar-item" href="{{route('settings.profile')}}">{{__('Profile')}}</a>
+                        <a class="navbar-item" href="{{route('settings.password')}}">{{__('Change Password')}}</a>
                         <a class="navbar-item" href="javascript:voud(0)"
                            onclick="confirm('Sure to logout?') && document.getElementById('logout-form').submit()">{{__('Logout')}}</a>
                     </div>

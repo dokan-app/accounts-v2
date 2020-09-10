@@ -6,19 +6,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
-//Route::get('/dashboard', function () {
-//    return view('dashboard.root');
-//})->name('dashboard')->middleware('auth');
-
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', function () {
-        return view('dashboard.root');
+        return redirect()->route('settings.profile');
     })->name('dashboard');
 
-    Route::get('/manage-oauth', function () {
-        return view('dashboard.oauth');
-    })->name('oauth');
+    // oauths
+    Route::view('oauth/clients', 'oauth.clients')->name('app-oauth.clients');
+    Route::view('oauth/personal-access-tokens', 'oauth.personal-access-tokens')->name('app-oauth.personal-access-tokens');
+    Route::view('oauth/authorized-services', 'oauth.authorized-services')->name('app-oauth.authorized-services');
+
+
+    // User
+    Route::view('profile', 'user-settings.profile')->name('settings.profile');
+    Route::view('password', 'user-settings.password')->name('settings.password');
+
+    Route::post('profile', [AuthController::class, 'updateProfile']);
+    Route::post('password', [AuthController::class, 'updatePassword']);
 });
 
 Route::group(['prefix' => 'auth', 'middleware' => 'guest'], function () {

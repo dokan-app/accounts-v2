@@ -1,4 +1,6 @@
 $primary: #004c3f;
+$menu-item-active-background-color: $primary;
+
 @import "~bulma-scss/bulma";
 body {
     @apply bg-gray-200;
