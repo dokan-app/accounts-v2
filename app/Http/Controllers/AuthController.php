@@ -22,7 +22,12 @@ class AuthController extends Controller
 
 
         if (auth()->attempt($payload, $request->remember == 'on')) {
-            return redirect()->route('dashboard');
+
+            if (session()->exists('redirect_to')) {
+                return redirect(session()->get('redirect_to'));
+            } else {
+                return redirect()->route('dashboard');
+            }
         }
 
         session()->flash('errorMsg', __('Invalid Credential'));

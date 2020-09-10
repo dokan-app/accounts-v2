@@ -23,26 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f68c4d-5dda-435c-87a6-9b9705149a13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/oauth/authorized-services.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/oauth/clients.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/_sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user-settings/password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user-settings/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/accounts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/accounts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/oauth.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/root.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/oauth/personal-access-tokens.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/_navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/_navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +210,8 @@
       <workItem from="1599712691470" duration="1899000" />
       <workItem from="1599715522809" duration="471000" />
       <workItem from="1599720526302" duration="1548000" />
-      <workItem from="1599722492100" duration="4695000" />
+      <workItem from="1599722492100" duration="4824000" />
+      <workItem from="1599729931087" duration="693000" />
     </task>
     <servers />
   </component>
@@ -259,10 +243,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="372" y="177" width="824" height="746" key="save.file.as.template.dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599712956097" />
-    <state x="623" y="245" width="672" height="631" key="search.everywhere.popup" timestamp="1599727161532">
+    <state x="623" y="245" width="672" height="631" key="search.everywhere.popup" timestamp="1599729943022">
       <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1599713074224" />
-    <state x="623" y="245" width="672" height="631" key="search.everywhere.popup/0.23.1920.1005@0.23.1920.1005" timestamp="1599727161532" />
+    <state x="623" y="245" width="672" height="631" key="search.everywhere.popup/0.23.1920.1005@0.23.1920.1005" timestamp="1599729943022" />
   </component>
 </project>
