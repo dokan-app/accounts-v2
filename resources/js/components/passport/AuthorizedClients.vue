@@ -14,7 +14,7 @@
 
                 <div class="card-content">
                     <!-- Authorized Tokens -->
-                    <table class="table table-responsive table-borderless mb-0">
+                    <table class="table is-fullwidth">
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -39,7 +39,7 @@
 
                             <!-- Revoke Button -->
                             <td style="vertical-align: middle;">
-                                <a class="action-link text-danger" @click="revoke(token)">
+                                <a class="button is-danger is-small" @click="revoke(token)">
                                     Revoke
                                 </a>
                             </td>
