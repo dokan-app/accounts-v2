@@ -66,8 +66,9 @@
                             </div>
                             {{----}}
 
-                            <div class="field">
-                                <button class="button is-primary">{{__('Register')}}</button>
+                            <div class="field flex items-center">
+                                <button class="button is-primary mr-2">{{__('Register')}}</button>
+                                <a class="text-gray-600" href="{{route('auth.login')}}">Login now</a>
                             </div>
                             {{----}}
                         </form>

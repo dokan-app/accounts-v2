@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,3 +36,4 @@ Route::group(['prefix' => 'auth', 'middleware' => 'guest'], function () {
     Route::post('/register', [AuthController::class, 'register']);
 });
 Route::delete('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
+Route::get('/auth/verify', [AuthController::class, 'verifyMail'])->name('verification.verify');
