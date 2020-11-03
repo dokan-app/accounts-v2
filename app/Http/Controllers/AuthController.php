@@ -23,7 +23,8 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware(['signed'])->only('verifyMail');
-        $this->middleware('auth')->only('logout');
+        $this->middleware('auth')->only(['logout']);
+        $this->middleware('auth:api')->only(['me']);
     }
 
     /**
@@ -33,7 +34,6 @@ class AuthController extends Controller
      */
     public function login(LoginRequest $request)
     {
-
         if (auth()->attempt($request->only(['email', 'password']), $request->remember == 'on')) {
             if (session()->exists('redirect_to')) {
                 return redirect(session()->get('redirect_to'));
@@ -44,6 +44,12 @@ class AuthController extends Controller
 
         session()->flash('errorMsg', __('Invalid Credential'));
         return back();
+    }
+
+
+    public function me()
+    {
+        return auth()->user();
     }
 
     /**

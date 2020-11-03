@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->post('/me', function (Request $request) {
+Route::middleware('auth:api')->post('/auth/me', function (Request $request) {
     return $request->user();
 });
